@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expérience Interactive - Rotation Mentale</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .experiment-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .canvas-container {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .canvas-wrapper {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 3px solid #1e3c72;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .canvas-wrapper h3 {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #1e3c72;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            z-index: 10;
+        }
+        
+        .controls {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+            border-top: 5px solid #dc143c;
+        }
+        
+        .controls h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-same {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+        }
+        
+        .btn-same:hover {
+            background: linear-gradient(135deg, #1e3c72 0%, #0f1f3d 100%);
+            transform: scale(1.05);
+        }
+        
+        .btn-different {
+            background: linear-gradient(135deg, #dc143c 0%, #b71c1c 100%);
+            color: white;
+        }
+        
+        .btn-different:hover {
+            background: linear-gradient(135deg, #b71c1c 0%, #8b0000 100%);
+            transform: scale(1.05);
+        }
+        
+        .btn-reset {
+            background: linear-gradient(135deg, #666 0%, #444 100%);
+            color: white;
+        }
+        
+        .btn-reset:hover {
+            background: linear-gradient(135deg, #444 0%, #222 100%);
+            transform: scale(1.05);
+        }
+        
+        .info-panel {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .info-panel p {
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .info-panel strong {
+            color: #1e3c72;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .stat-card .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .instructions {
+            background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2a5298;
+        }
+        
+        .instructions h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .instructions li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #dc143c;
+        }
+        
+        @media (max-width: 768px) {
+            .canvas-wrapper {
+                width: 100%;
+                max-width: 400px;
+                height: 400px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Expérience Interactive de Rotation</h1>
+            <p class="subtitle">Gardony, Taylor & Brunyé (2014)</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="experiment-container">
+            <a href="index.html" class="back-link">← Retour au résumé</a>
+            
+            <div class="instructions">
+                <h3>Instructions</h3>
+                <ol>
+                    <li>Deux figures 3D de type Shepard-Metzler sont affichées côte à côte.</li>
+                    <li>La figure de gauche est la <strong>cible</strong> (fixe).</li>
+                    <li>La figure de droite est la <strong>figure réponse</strong> que vous pouvez faire tourner avec votre souris.</li>
+                    <li><strong>Cliquez et glissez</strong> sur la figure de droite pour la faire tourner dans toutes les directions.</li>
+                    <li>Une fois que vous avez déterminé si les deux figures sont <strong>identiques</strong> ou en <strong>miroir</strong>, cliquez sur le bouton correspondant.</li>
+                    <li>Essayez d'être aussi rapide et précis que possible !</li>
+                </ol>
+            </div>
+
+            <div class="info-panel">
+                <p><strong>Essai :</strong> <span id="trial-number">1</span> / <span id="total-trials">10</span></p>
+                <p><strong>Temps écoulé :</strong> <span id="timer">0.0</span> secondes</p>
+                <p><strong>Disparité angulaire initiale :</strong> <span id="angular-disparity">0</span>°</p>
+            </div>
+
+            <div class="canvas-container">
+                <div class="canvas-wrapper">
+                    <h3>Figure Cible (fixe)</h3>
+                    <canvas id="canvas-target"></canvas>
+                </div>
+                <div class="canvas-wrapper">
+                    <h3>Figure Réponse (rotatable)</h3>
+                    <canvas id="canvas-response"></canvas>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h3>Votre réponse</h3>
+                <p>Les deux figures sont-elles identiques ou en miroir ?</p>
+                <div class="button-group">
+                    <button class="btn btn-same" id="btn-same">IDENTIQUES (Same)</button>
+                    <button class="btn btn-different" id="btn-different">EN MIROIR (Different)</button>
+                    <button class="btn btn-reset" id="btn-reset">Nouvel essai</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="value" id="correct-count">0</div>
+                    <div class="label">Réponses correctes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="avg-time">0.0</div>
+                    <div class="label">Temps moyen (s)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="accuracy">0%</div>
+                    <div class="label">Précision</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cabrel TIOTSOP - Ecole polytechnique</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="experiment.js"></script>
+</body>
+</html>
+

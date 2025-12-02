@@ -1,0 +1,81 @@
+**Rapport de lecture – Gardony, Taylor & Brunyé (2014)**
+*What Does Physical Rotation Reveal About Mental Rotation?*
+Auteur du rapport : **Cabrel TIOTSOP**
+
+---
+
+### 1. Introduction
+
+Les travaux fondateurs de Shepard et Metzler (1971) ont montré que, lorsque l’on demande à des sujets de décider si deux objets 3D composés de blocs sont identiques ou en miroir, le temps de réponse augmente linéairement avec l’écart angulaire entre les deux orientations. Ce phénomène, appelé *angular disparity effect* (ADE), est généralement interprété comme la signature d’une rotation mentale “analogique” : le sujet ferait tourner une représentation interne de l’objet jusqu’à l’aligner sur la cible.
+
+Une partie importante de la littérature suppose que cette rotation mentale s’appuie sur des processus moteurs ou une forme de simulation motrice. Des études ont par exemple montré que la rotation mentale est facilitée lorsque le sujet effectue simultanément une rotation physique congruente d’un joystick, et qu’un entraînement moteur peut améliorer les performances de rotation mentale. D’autres travaux en neuroimagerie trouvent parfois une activation prémotrice ou motrice pendant la rotation mentale, même si cette activation dépend beaucoup du type de stimuli (mains, outils, objets abstraits) et des consignes.
+
+Dans ce contexte, l’article de Gardony et al. cherche à comparer directement rotation mentale et rotation physique, avec un suivi continu de la rotation réelle, pour tester deux hypothèses implicites de la littérature : (1) mental et physique partagent des mécanismes communs et (2) la rotation vise à atteindre un alignement exact entre les deux figures.
+
+---
+
+### 2. Objectifs de l’étude
+
+L’étude poursuit trois objectifs principaux. D’abord, vérifier si une tâche de rotation physique de figures 3D de type Shepard–Metzler produit un ADE comparable à celui observé en rotation mentale, en termes de relation entre disparité angulaire initiale et temps de réponse. Ensuite, examiner la dynamique temporelle de la rotation physique, pour voir si les participants rotatent jusqu’à un alignement (0° de disparité) ou convergent vers un autre type de configuration. Enfin, comparer les stratégies mises en œuvre selon que la réponse attendue est “same” (figures identiques) ou “different” (figures miroir).
+
+Les auteurs formulent explicitement l’hypothèse que mental et physique devraient présenter des ADE similaires. Ils s’attendent aussi, au départ, à ce que la rotation physique aboutisse à un match entre les figures sur les essais “same”.
+
+---
+
+### 3. Méthode
+
+L’échantillon est constitué de 32 étudiants de premier cycle à l’Université Tufts (16 hommes, 16 femmes, âge moyen 19,47 ans), rémunérés pour leur participation.
+
+Les stimuli sont des figures 3D de type Shepard–Metzler, dérivées de la bibliothèque de Peters et Battista (2008), modélisées sous Google SketchUp. Les auteurs créent 15 figures et leurs images miroir, présentées via un logiciel de réalité virtuelle (Vizard). Sur l’écran, deux figures sont affichées côte à côte : une cible et une figure “réponse”.
+
+Pour la rotation physique, les participants manipulent un capteur inertiel Intersense InertiaCube 2+ (3 degrés de liberté) inséré dans une balle de tennis. Ce montage sphérique est conçu pour permettre une rotation libre de la figure réponse, sans imposer de repère particulier. Les auteurs indiquent que le câble du capteur pouvait être légèrement gênant mais qu’aucun participant n’a rapporté de difficulté notable.
+
+Avant la tâche principale, les participants remplissent plusieurs questionnaires (sens de l’orientation, stratégies spatiales, confiance spatiale, connaissance des directions cardinales, expérience de jeu vidéo) ainsi qu’une tâche d’Operation Span pour mesurer la capacité de mémoire de travail. Les scores observés décrivent un profil moyen en termes de capacités spatiales et de WMC, avec une pratique modérée du jeu vidéo.
+
+La tâche expérimentale comporte deux conditions : rotation mentale et rotation physique. Dans les deux cas, les participants doivent juger si les deux figures sont identiques ou en miroir, en répondant oralement “same” ou “different” dans un micro-casque. La reconnaissance vocale enregistre la réponse et le temps de réponse, mesuré à partir de l’initiation de la parole. Dans la condition de rotation mentale, la figure réponse est figée et le sujet doit uniquement imaginer la rotation. Dans la condition de rotation physique, le sujet fait tourner la figure réponse en manipulant la balle-capteur à deux mains. L’ordre des tâches et la position de la figure rotatable (gauche ou droite) sont contrebalancés. Chaque tâche est précédée de cinq essais d’entraînement.
+
+Sur chaque essai, les deux figures sont présentées avec des orientations indépendantes, représentées par des quaternions. L’écart angulaire entre les deux orientations (la “disparité angulaire”) est tiré uniformément entre 0° et 180°. Les auteurs recourent aux quaternions plutôt qu’aux angles d’Euler pour éviter les problèmes de *gimbal lock* et disposer d’une mesure directe de l’angle minimal permettant de faire coïncider les deux orientations (les formules précises sont données en annexe de l’article).
+
+Dans l’analyse, les disparités initiales sont regroupées par tranches de 30° (0–30°, 30–60°, …, 150–180°). Pour la rotation physique, la disparité angulaire est enregistrée en continu à 50 Hz, ce qui permet de suivre la trajectoire de rotation tout au long de l’essai.
+
+---
+
+### 4. Résultats
+
+Les analyses de temps de réponse et de trajectoires continues ne portent que sur les réponses correctes.
+
+Un premier résultat est le constat d’un ADE dans les deux tâches sur les essais “same”. Pour chaque participant, les auteurs corrèlent la disparité angulaire initiale et le temps de réponse sur ces essais. Les corrélations moyennes sont d’environ r = 0,36 pour la rotation mentale et r = 0,32 pour la rotation physique, toutes deux significativement différentes de zéro, sans différence significative entre elles. On retrouve donc le patron classique : plus l’écart angulaire est grand, plus la réponse est lente, que la rotation soit mentale ou physique.
+
+Un ANOVA sur les temps de réponse montre que, dans les deux tâches, les essais “same” présentent une augmentation linéaire du temps de réponse avec la disparité angulaire, alors que les essais “different” ne montrent pas de relation systématique avec la disparité. Les temps de réponse sont globalement plus lents en rotation physique qu’en rotation mentale, et plus lents pour les réponses “different” que “same”. Sur les taux d’erreur, on observe également une augmentation avec la disparité angulaire sur les essais “same”, alors que les essais “different” restent relativement stables. La rotation physique est en revanche plus précise (moins d’erreurs) que la rotation mentale. L’ensemble dessine un compromis vitesse/précision : mentalement, les sujets répondent plus vite mais se trompent davantage ; physiquement, ils prennent plus de temps mais commettent moins d’erreurs.
+
+Le résultat le plus original concerne la dynamique fine de la rotation physique. Pour chaque essai, les auteurs normalisent la série temporelle de disparité angulaire en 100 échantillons (par interpolation) et découpent ensuite cette série en quatre quartiles temporels. Ils examinent comment évolue la disparité au cours du temps en fonction de la disparité initiale et du type d’essai (“same” ou “different”). Ils montrent que, quels que soient les bins de départ, la disparité finale converge vers deux valeurs stables : environ 49° pour les essais “same” et environ 113° pour les essais “different”. Dans aucun cas les participants n’aboutissent systématiquement à une disparité proche de 0°. Même lorsque la disparité de départ est faible (~20°), les sujets tendent à s’en éloigner plutôt qu’à la réduire à zéro.
+
+Les auteurs examinent aussi l’effet de propriétés géométriques des figures sur les performances. Ils définissent une variable de symétrie (figure “symétrique” si les deux bras externes ont le même nombre de blocs, “asymétrique” sinon) et une variable de “poids des bras” (arm weighting) indiquant si la majorité des blocs est située dans les bras ou non. Les analyses montrent que les figures asymétriques et celles à bras “lourds” sont associées à des temps de réponse plus longs, et que la combinaison symétrie + bras lourds est particulièrement coûteuse en rotation physique.
+
+Enfin, un ensemble d’analyses relie les pentes d’ADE individuelles aux questionnaires (sens de l’orientation, stratégies spatiales, jeux vidéo, mémoire de travail) et au genre. Aucune relation robuste n’est mise en évidence : ni genre ni différences individuelles mesurées ne prédisent significativement la pente de l’ADE en rotation mentale ou en rotation physique.
+
+---
+
+### 5. Discussion
+
+Les résultats confirment d’abord une forte similarité entre rotation mentale et rotation physique. Les deux tâches produisent des ADE de magnitude comparable, avec un même profil : les essais “same” montrent une augmentation linéaire du temps de réponse et des erreurs avec la disparité angulaire, alors que les essais “different” restent relativement indépendants de cette disparité. Cela soutient l’hypothèse que mental et physique reposent sur des mécanismes de transformation spatiale communs, probablement en lien avec des processus moteurs ou une simulation motrice, comme le suggéraient déjà les travaux de Wohlschläger & Wohlschläger ou les études de neuroimagerie citées par les auteurs.
+
+En même temps, la comparaison met en évidence un compromis vitesse/précision : la rotation mentale est plus rapide mais moins précise, tandis que la rotation physique est plus lente mais plus fiable. Une interprétation possible est que la rotation mentale permet des stratégies plus flexibles (par exemple, combiner rotation holistique et traitement par morceaux), alors que la rotation physique impose un mouvement continu du stimulus qui pourrait contraindre davantage la stratégie.
+
+Le point le plus important est que les données de rotation physique remettent en cause l’idée selon laquelle la rotation mentale consisterait à amener systématiquement les objets à un alignement exact. Les trajectoires observées montrent une convergence non pas vers 0°, mais vers ce que les auteurs appellent une *canonical difference* : une différence angulaire off-axis (49° pour les essais “same”, 113° pour les “different”) qui donne un point de vue particulièrement informatif pour comparer les deux figures. Cette notion est mise en parallèle avec les travaux sur les “vues canoniques” des objets 3D, qui montrent que les observateurs privilégient spontanément des perspectives 3/4 offrant un compromis optimal entre visibilité des faces et diagnostic de la structure.
+
+Les stratégies semblent aussi différer qualitativement entre essais “same” et “different”. Pour juger que deux figures sont identiques, les participants amèneraient la figure réponse vers une différence canonique modérée, suffisante pour superposer mentalement les structures. Pour juger qu’elles sont différentes, ils convergeraient vers un point de vue qui met en évidence la non-coïncidence des bras et de la structure globale. Cela explique à la fois l’absence d’ADE en temps de réponse pour les essais “different” et les valeurs finales de disparité très distinctes (49° vs 113°).
+
+L’analyse des propriétés des figures renforce l’idée que la stratégie n’est pas uniquement une rotation globale uniforme. Les figures symétriques avec de nombreux blocs dans les bras sont plus difficiles à traiter, en particulier en rotation physique. Les auteurs s’appuient sur l’idée que la rotation d’une figure passe par un noyau “holistique” centré (plan principal de la figure) complété par une exploration plus lente des bras. Quand la majorité des blocs est dans les bras et que ceux-ci sont symétriques, les heuristiques de contraste deviennent moins efficaces, ce qui allonge les temps de traitement.
+
+Enfin, les auteurs soulignent que, même si les patterns de comportement suggèrent des processus communs entre rotation mentale et physique, cette conclusion reste indirecte. Ils suggèrent comme prolongement des études de neuroimagerie combinant le même dispositif de rotation physique avec une tâche de rotation mentale, afin de comparer directement les corrélats neuronaux des deux types de rotation, et de mieux comprendre comment une représentation mentale analogique s’articule avec les systèmes moteurs.
+
+---
+
+### 6. Piste pour reproduire l’expérience dans un projet étudiant
+
+Dans le cadre d’un projet de M1, une reproduction simplifiée de cette étude pourrait consister à mettre en place une tâche informatisée inspirée du protocole original, accessible via un site web (par exemple hébergé sur GitHub). L’idée serait de recréer deux conditions : une condition de rotation mentale, où l’on présente deux figures 3D de type Shepard–Metzler en orientations différentes et où le participant doit juger rapidement si elles sont identiques ou en miroir sans pouvoir manipuler les objets, et une condition de rotation “physique” simulée, où la figure réponse peut être tournée à l’écran via un dispositif d’entrée (souris, trackpad, manette).
+
+Pour chaque essai, il serait possible de contrôler la disparité angulaire entre les orientations initiales des deux figures, de mesurer le temps de réponse et l’exactitude, et, dans la condition “physique”, d’enregistrer l’évolution de l’orientation de la figure réponse au cours du temps. Une fois les données collectées, on pourrait reproduire les principales analyses de l’article : calculer l’ADE (corrélation disparité–temps de réponse) sur les essais “same”, comparer mental et physique, regrouper les disparités en classes angulaires, normaliser les trajectoires de rotation et observer s’il existe une convergence vers une certaine différence angulaire plutôt que vers l’alignement parfait.
+
+Cette reproduction, même approximative par rapport au dispositif original (capteur inertiel, contrôle strict du contexte expérimental), permettrait de vérifier qualitativement les résultats de Gardony et al. sur un échantillon étudiant, et servirait de base pour un travail ultérieur de modélisation ou d’extension (par exemple, étude de nouvelles familles de stimuli ou comparaison de différentes interfaces de rotation).
