@@ -1,0 +1,222 @@
+[
+  {
+    "trial_number": 1,
+    "stimulus_id": "7_50",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 1.4646244049072266,
+    "is_correct": false,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 2,
+    "stimulus_id": "19_50",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.1601090431213379,
+    "is_correct": true,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 3,
+    "stimulus_id": "2_100",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 0.1359105110168457,
+    "is_correct": false,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 4,
+    "stimulus_id": "32_100",
+    "is_mirror": false,
+    "user_response": true,
+    "response_time": 0.15739083290100098,
+    "is_correct": false,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 5,
+    "stimulus_id": "16_0",
+    "is_mirror": false,
+    "user_response": false,
+    "response_time": 0.11258935928344727,
+    "is_correct": true,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 0
+  },
+  {
+    "trial_number": 6,
+    "stimulus_id": "28_50",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.14548134803771973,
+    "is_correct": true,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 7,
+    "stimulus_id": "34_100",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 0.1284778118133545,
+    "is_correct": false,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 8,
+    "stimulus_id": "39_50",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.14433646202087402,
+    "is_correct": true,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 9,
+    "stimulus_id": "22_150",
+    "is_mirror": false,
+    "user_response": false,
+    "response_time": 0.11628055572509766,
+    "is_correct": true,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 150
+  },
+  {
+    "trial_number": 10,
+    "stimulus_id": "3_150",
+    "is_mirror": false,
+    "user_response": true,
+    "response_time": 0.12810945510864258,
+    "is_correct": false,
+    "rotation_enabled": true,
+    "disparity": 0.0,
+    "initial_angle": 150
+  },
+  {
+    "trial_number": 11,
+    "stimulus_id": "8_100",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 0.128448486328125,
+    "is_correct": false,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 12,
+    "stimulus_id": "2_50",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.12719988822937012,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 13,
+    "stimulus_id": "35_50",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 0.14400911331176758,
+    "is_correct": false,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 14,
+    "stimulus_id": "39_100",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.11302065849304199,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 15,
+    "stimulus_id": "43_50",
+    "is_mirror": false,
+    "user_response": false,
+    "response_time": 0.13062047958374023,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 16,
+    "stimulus_id": "44_0",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.14540600776672363,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 0
+  },
+  {
+    "trial_number": 17,
+    "stimulus_id": "15_0",
+    "is_mirror": false,
+    "user_response": false,
+    "response_time": 0.12964224815368652,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 0
+  },
+  {
+    "trial_number": 18,
+    "stimulus_id": "31_50",
+    "is_mirror": true,
+    "user_response": true,
+    "response_time": 0.14916491508483887,
+    "is_correct": true,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 50
+  },
+  {
+    "trial_number": 19,
+    "stimulus_id": "29_100",
+    "is_mirror": true,
+    "user_response": false,
+    "response_time": 0.1280970573425293,
+    "is_correct": false,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 100
+  },
+  {
+    "trial_number": 20,
+    "stimulus_id": "26_0",
+    "is_mirror": false,
+    "user_response": true,
+    "response_time": 0.14513754844665527,
+    "is_correct": false,
+    "rotation_enabled": false,
+    "disparity": 0.0,
+    "initial_angle": 0
+  }
+]

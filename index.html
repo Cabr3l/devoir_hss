@@ -46,6 +46,120 @@
                     </p>
                     
                     <h3>Résultats principaux</h3>
+                    <p>
+                        L'analyse de la disparité angulaire constitue le cœur de cette étude. Les auteurs ont examiné la relation entre le temps de réaction et la disparité angulaire initiale entre les deux figures présentées, en comparant deux conditions expérimentales distinctes : 
+                    </p>
+                    <ul>
+                        <li><strong>Rotation physique</strong> : Les participants pouvaient manipuler un dispositif (balle-capteur) pour faire tourner physiquement la figure de réponse.</li>
+                        <li><strong>Rotation mentale</strong> : Les participants devaient uniquement utiliser leur représentation mentale pour imaginer la rotation de la figure.</li>
+                    </ul>
+                    
+                    <div class="figure-container">
+                        <figure class="results-figure">
+                            <img src="courbes.png" alt="Courbes de temps de réaction en fonction de la disparité angulaire" class="results-image">
+                            <figcaption>
+                                <strong>Figure 1 :</strong> Relation entre le temps de réaction (RT) et la disparité angulaire initiale pour les conditions de rotation physique et rotation mentale. Les courbes montrent une corrélation positive significative dans les deux cas, confirmant la présence d'un effet de disparité angulaire (ADE).
+                            </figcaption>
+                        </figure>
+                    </div>
+                    
+                    <p>
+                        Les résultats graphiques révèlent une <strong>corrélation positive significative</strong> entre la disparité angulaire et le temps de réaction dans les deux conditions expérimentales. Cette relation a été testée statistiquement via des tests de corrélation (t-test), confirmant que l'hypothèse d'une dépendance linéaire entre ces deux variables est statistiquement validée.
+                    </p>
+                    
+                    <p>
+                        <strong>Réplication de l'expérience :</strong> Nous avons reproduit cette expérience en utilisant une implémentation Python (disponible ci-dessous). Notre version propose quelques adaptations méthodologiques : l'utilisateur contrôle la rotation via la souris plutôt qu'un dispositif physique dédié, et les stimuli utilisés diffèrent légèrement de ceux de l'étude originale. Néanmoins, pour un participant concentré et engagé dans la tâche, nos analyses révèlent des <strong>p-valeurs significativement faibles</strong>, permettant d'affirmer avec confiance que le temps de réaction est bien lié à la disparité angulaire, confirmant ainsi la robustesse du phénomène ADE.
+                    </p> 
+                    <p>Nous consignons les résultats de l'article dans le tableau suivant :</p>
+
+                    <table class="results-table">
+                        <thead>
+                          <tr>
+                            <th>Hypothèse nulle H<sub>0</sub></th>
+                            <th>Statistiques rapportées</th>
+                            <th>Conclusion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1. En rotation mentale, la corrélation vraie entre angle initial et RT est nulle (ρ = 0).</td>
+                            <td>t(31) = 12.62, p &lt; .001</td>
+                            <td>H<sub>0</sub> rejetée. Corrélation positive significative : ADE présent en rotation mentale.</td>
+                          </tr>
+                          <tr>
+                            <td>2. En rotation physique, la corrélation vraie entre angle initial et RT est nulle (ρ = 0).</td>
+                            <td>t(31) = 10.79, p &lt; .001</td>
+                            <td>H<sub>0</sub> rejetée. Corrélation positive significative : ADE présent en rotation physique.</td>
+                          </tr>
+                          <tr>
+                            <td>3. L'ADE moyen est le même en rotation mentale et en rotation physique.</td>
+                            <td>t(31) = 1.04, p &gt; .1</td>
+                            <td>H<sub>0</sub> non rejetée. Pas de preuve que l'ADE diffère entre les deux tâches.</td>
+                          </tr>
+                          <tr>
+                            <td>4. Pas d'interaction à 3 facteurs sur les RT : tâche × type d'essai × bin d'angle.</td>
+                            <td>F(5,155) = 0.65, p &gt; .1</td>
+                            <td>H<sub>0</sub> non rejetée. Profil RT(angle, same/different) globalement similaire pour mental et physique.</td>
+                          </tr>
+                          <tr>
+                            <td>5. Pas d'interaction type d'essai × angle sur les RT.</td>
+                            <td>F(5,155) = 16.6, p &lt; .001, η<sub>p</sub><sup>2</sup> = .349</td>
+                            <td>H<sub>0</sub> rejetée. L'effet de l'angle dépend du type d'essai : ADE pour same mais pas pour different.</td>
+                          </tr>
+                          <tr>
+                            <td>6. Pas d'effet de la tâche sur les RT (RT mental = RT physique).</td>
+                            <td>F(1,31) = 59.62, p &lt; .001, η<sub>p</sub><sup>2</sup> = .658</td>
+                            <td>H<sub>0</sub> rejetée. RT nettement plus lents en rotation physique qu'en rotation mentale.</td>
+                          </tr>
+                          <tr>
+                            <td>7. Pas d'effet du type d'essai sur les RT (RT same = RT different).</td>
+                            <td>F(1,31) = 40.71, p &lt; .001, η<sub>p</sub><sup>2</sup> = .568</td>
+                            <td>H<sub>0</sub> rejetée. Essais different plus lents que les essais same.</td>
+                          </tr>
+                          <tr>
+                            <td>8. Pas d'interaction à 3 facteurs sur les erreurs (tâche × type d'essai × angle).</td>
+                            <td>F<sub>GG</sub>(3.83,118.6) = 1.09, p &gt; .1</td>
+                            <td>H<sub>0</sub> non rejetée. Pas de pattern d'erreur très complexe dépendant des trois facteurs.</td>
+                          </tr>
+                          <tr>
+                            <td>9. Pour les essais same, pas d'effet de l'angle sur les erreurs (tâche × angle).</td>
+                            <td>F(5,155) = 8.01, p &lt; .001, η<sub>p</sub><sup>2</sup> = .205</td>
+                            <td>H<sub>0</sub> rejetée. Pour same, les erreurs augmentent avec l'angle (ADE sur les erreurs).</td>
+                          </tr>
+                          <tr>
+                            <td>10. Pas d'effet de la tâche sur les erreurs (taux d'erreur mental = taux d'erreur physique).</td>
+                            <td>F(1,31) = 111.97, p &lt; .001, η<sub>p</sub><sup>2</sup> = .783</td>
+                            <td>H<sub>0</sub> rejetée. Beaucoup moins d'erreurs en rotation physique qu'en rotation mentale.</td>
+                          </tr>
+                          <tr>
+                            <td>11. Pas d'effet du type d'essai sur les erreurs (erreurs same = erreurs different).</td>
+                            <td>F(1,31) = 0.31, p &gt; .1</td>
+                            <td>H<sub>0</sub> non rejetée. Le taux d'erreur ne dépend pas de same vs different.</td>
+                          </tr>
+                          <tr>
+                            <td>12. Sur la dynamique de l'angle (rotation physique), pas d'interaction quartile × angle initial × type d'essai.</td>
+                            <td>F(15,465) = 5.99, p &lt; .001, η<sub>p</sub><sup>2</sup> = .162</td>
+                            <td>H<sub>0</sub> rejetée. L'évolution de la disparité angulaire dépend de l'angle de départ et du type d'essai (same/different).</td>
+                          </tr>
+                          <tr>
+                            <td>13. Pas d'interaction tâche × symétrie × arm weighting sur les RT.</td>
+                            <td>F(1,31) = 9.45, p &lt; .01, η<sub>p</sub><sup>2</sup> = .234</td>
+                            <td>H<sub>0</sub> rejetée. La combinaison tâche/symétrie/poids des bras influence les RT.</td>
+                          </tr>
+                          <tr>
+                            <td>14. Pas d'effet de la symétrie sur les RT (symétrique = asymétrique).</td>
+                            <td>F(1,31) = 17.23, p &lt; .001, η<sub>p</sub><sup>2</sup> = .357</td>
+                            <td>H<sub>0</sub> rejetée. Les figures asymétriques sont plus lentes à traiter que les symétriques.</td>
+                          </tr>
+                          <tr>
+                            <td>15. Pas d'effet du arm weighting sur les RT (bras lourds = bras légers).</td>
+                            <td>F(1,31) = 24.49, p &lt; .001, η<sub>p</sub><sup>2</sup> = .441</td>
+                            <td>H<sub>0</sub> rejetée. Les figures avec bras lourds donnent des RT nettement plus lents que celles à bras légers.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    
+
                     <ul>
                         <li><strong>ADE similaire dans les deux tâches</strong> : Les deux tâches produisent un ADE de magnitude comparable (r ≈ 0,36 pour rotation mentale, r ≈ 0,32 pour rotation physique), confirmant que mental et physique reposent sur des mécanismes communs.</li>
                         <li><strong>Compromis vitesse/précision</strong> : La rotation mentale est plus rapide mais moins précise, tandis que la rotation physique est plus lente mais plus fiable.</li>
@@ -53,6 +167,8 @@
                         <li><strong>Stratégies différenciées</strong> : Pour juger que deux figures sont identiques, les participants amènent la figure vers une différence canonique modérée. Pour juger qu'elles sont différentes, ils convergent vers un point de vue qui met en évidence la non-coïncidence des structures.</li>
                     </ul>
                     
+                    
+
                     <h3>Conclusion</h3>
                     <p>
                         Les résultats confirment une forte similarité entre rotation mentale et rotation physique, soutenant l'hypothèse que ces deux processus reposent sur des mécanismes de transformation spatiale communs, probablement en lien avec des processus moteurs ou une simulation motrice. Cependant, les données remettent en cause l'idée selon laquelle la rotation mentale consisterait à amener systématiquement les objets à un alignement exact. Les trajectoires observées montrent une convergence vers une <em>canonical difference</em> : une différence angulaire off-axis qui donne un point de vue particulièrement informatif pour comparer les deux figures, similaire aux "vues canoniques" des objets 3D.
@@ -61,46 +177,45 @@
             </section>
 
             <section class="experiments">
-                <h2>Expérience Interactive</h2>
-                <p class="intro-text">
-                    Essayez vous-même l'expérience de rotation mentale et physique avec des figures 3D de type Shepard-Metzler. 
-                    Manipulez les figures avec votre souris pour reproduire les conditions de l'étude.
-                </p>
-                
-                <div class="experiment-list">
-                    <div class="experiment-card" style="grid-column: 1 / -1;">
-                        <h3>Expérience Interactive de Rotation</h3>
-                        <p>Manipulez des figures 3D de type Shepard-Metzler et testez votre capacité à déterminer si deux figures sont identiques ou en miroir. Cette expérience reproduit les conditions de rotation physique de l'étude originale.</p>
-                        <a href="experiment.html" class="download-btn">Lancer l'expérience interactive</a>
-                    </div>
-                </div>
-                
-                <h2 style="margin-top: 50px;">Analyses Python</h2>
+                <h2>Analyses Python</h2>
                 <p class="intro-text">
                     Téléchargez et exécutez les fichiers Python suivants pour analyser les données et visualiser les résultats de l'expérience.
                 </p>
                 
                 <div class="experiment-list">
-                    <div class="experiment-card">
+                    <div class="experiment-card" style="grid-column: 1 / -1;">
                         <h3>Analyse de l'ADE</h3>
                         <p>Calcule et visualise l'effet de disparité angulaire (ADE) : corrélation entre l'écart angulaire initial et le temps de réponse.</p>
+                        <p> Nous utilisons l'IA pour générer les coordonnées des points de la figure 3D à partir des images fournies par l'article 2, cité en référence.</p>
                         <a href="experiments/experience1.py" class="download-btn" download>Télécharger experience1.py</a>
-                    </div>
-                    
-                    <div class="experiment-card">
-                        <h3>Trajectoires de rotation</h3>
-                        <p>Analyse la dynamique temporelle de la rotation physique et visualise les trajectoires de convergence vers les différences canoniques.</p>
-                        <a href="experiments/experience2.py" class="download-btn" download>Télécharger experience2.py</a>
-                    </div>
-                    
-                    <div class="experiment-card">
-                        <h3>Comparaison mental vs physique</h3>
-                        <p>Compare les temps de réponse et les taux d'erreur entre rotation mentale et rotation physique.</p>
-                        <a href="experiments/experience3.py" class="download-btn" download>Télécharger experience3.py</a>
                     </div>
                 </div>
             </section>
         </div>
+
+        <section class="references-section">
+            <div class="container">
+                <h2>Références</h2>
+                <ol class="references-list">
+                    <li>
+                        <span class="ref-authors">Gardony, A. L., Taylor, H. A., & Brunyé, T. T.</span>
+                        <span class="ref-year">(2014).</span>
+                        <span class="ref-title">What Does Physical Rotation Reveal About Mental Rotation?</span>
+                        <span class="ref-journal">Psychological Science</span>,
+                        <span class="ref-volume">25(3)</span>,
+                        <span class="ref-pages">605-612</span>.
+                    </li>
+                    <li>
+                        <span class="ref-authors">Ganis, G. & Kievit, R.</span>
+                        <span class="ref-year">(2015).</span>
+                        <span class="ref-title">A New Set of Three-Dimensional Shapes for Investigating Mental Rotation Processes: Validation Data and Stimulus Set.</span>
+                        <span class="ref-journal">Journal of Open Psychology Data</span>,
+                        <span class="ref-volume">3</span>:
+                        <span class="ref-doi">e3, DOI: <a href="http://dx.doi.org/10.5334/jopd.a" target="_blank" rel="noopener noreferrer">http://dx.doi.org/10.5334/jopd.a</a></span>.
+                    </li>
+                </ol>
+            </div>
+        </section>
     </main>
 
     <footer>

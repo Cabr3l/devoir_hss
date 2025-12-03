@@ -22,9 +22,8 @@ resume-article/
 ├── README.md           # Ce fichier
 ├── requirements.txt    # Dépendances Python
 └── experiments/        # Dossier contenant les fichiers Python d'analyse
-    ├── experience1.py  # Analyse de l'effet de disparité angulaire (ADE)
-    ├── experience2.py  # Analyse des trajectoires de rotation physique
-    └── experience3.py  # Comparaison rotation mentale vs rotation physique
+    ├── experience1.py            # Analyse de l'effet de disparité angulaire (ADE)
+    └── experience_pygame_3d.py   # Expérience interactive 3D avec PyOpenGL + Pygame
 ```
 
 ## Article résumé
@@ -49,9 +48,8 @@ pip install -r requirements.txt
 Pour exécuter les analyses :
 ```bash
 cd experiments
-python experience1.py  # Analyse de l'ADE
-python experience2.py  # Analyse des trajectoires
-python experience3.py  # Comparaison mental vs physique
+python experience1.py            # Analyse de l'ADE
+python experience_pygame_3d.py  # Expérience Pygame 3D avec PyOpenGL
 ```
 
 Chaque script génère un graphique sauvegardé au format PNG.
@@ -66,8 +64,6 @@ Chaque script génère un graphique sauvegardé au format PNG.
 
 ### Analyses Python
 - **experience1.py** : Calcule et visualise l'effet de disparité angulaire (ADE), montrant la corrélation entre l'écart angulaire initial et le temps de réponse
-- **experience2.py** : Analyse les trajectoires de rotation physique et la convergence vers les différences canoniques
-- **experience3.py** : Compare les performances entre rotation mentale et rotation physique, illustrant le compromis vitesse/précision
 
 
 ## Références
