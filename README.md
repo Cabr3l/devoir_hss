@@ -6,26 +6,6 @@ Site web statique présentant le résumé d'un article scientifique lu dans le c
 
 Ce site web présente un résumé détaillé de l'article **"What Does Physical Rotation Reveal About Mental Rotation?"** de Gardony, Taylor & Brunyé (2014). L'article compare la rotation mentale et la rotation physique dans des tâches de comparaison de figures 3D de type Shepard-Metzler.
 
-Le site inclut :
-- Un résumé complet de l'article avec introduction, objectifs, méthodologie, résultats et conclusions
-- Une **expérience interactive** permettant aux visiteurs de manipuler des figures 3D avec la souris
-- Des fichiers Python pour analyser les données et visualiser les résultats de l'étude
-
-## Structure du projet
-
-```
-resume-article/
-├── index.html          # Page principale avec le résumé de l'article
-├── experiment.html     # Page interactive de l'expérience
-├── experiment.js       # Script JavaScript pour la manipulation 3D
-├── style.css           # Feuille de style CSS
-├── README.md           # Ce fichier
-├── requirements.txt    # Dépendances Python
-└── experiments/        # Dossier contenant les fichiers Python d'analyse
-    ├── experience1.py            # Analyse de l'effet de disparité angulaire (ADE)
-    └── experience_pygame_3d.py   # Expérience interactive 3D avec PyOpenGL + Pygame
-```
-
 ## Article résumé
 
 **Titre** : What Does Physical Rotation Reveal About Mental Rotation?  
@@ -48,29 +28,21 @@ pip install -r requirements.txt
 Pour exécuter les analyses :
 ```bash
 cd experiments
-python experience1.py            # Analyse de l'ADE
 python experience_pygame_3d.py  # Expérience Pygame 3D avec PyOpenGL
 ```
 
-Chaque script génère un graphique sauvegardé au format PNG.
+Le script génère un graphique sauvegardé au format PNG.
 
-## Fonctionnalités
-
-### Expérience interactive
-- Manipulation 3D avec Three.js
-- Enregistrement des temps de réponse
-- Calcul de la disparité angulaire
-- Statistiques en temps réel
 
 ### Analyses Python
-- **experience1.py** : Calcule et visualise l'effet de disparité angulaire (ADE), montrant la corrélation entre l'écart angulaire initial et le temps de réponse
+- **experience_pygame_3d.py** : Calcule et visualise l'effet de disparité angulaire (ADE), montrant la corrélation entre l'écart angulaire initial et le temps de réponse
 
 
 ## Références
 
 Gardony, A. L., Taylor, H. A., & Brunyé, T. T. (2014). What Does Physical Rotation Reveal About Mental Rotation? *Psychological Science*, 25(3), 605-612.
 
+Ganis, G. & Kievit, R. (2015). A New Set of Three-Dimensional Shapes for Investigating Mental Rotation Processes: Validation Data and Stimulus Set. Journal of Open Psychology Data, 3: e3, DOI: http://dx.doi.org/10.5334/jopd.a. 
 ## Licence
 
-Ce projet est libre d'utilisation pour des fins éducatives.
 
