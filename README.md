@@ -1,6 +1,6 @@
 # Devoir de HSS - Cabrel TIOTSOP
 
-Site web statique présentant le résumé d'un article scientifique lu dans le cadre de l'Ecole polytechnique.
+Site web statique présentant le résumé d'un article scientifique lu dans le cadre du cours de HSS_51H05_EP.
 
 ## Description
 
